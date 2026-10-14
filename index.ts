@@ -22,7 +22,7 @@ await generateText({
             integrationTool.function.name,
             tool({
                 description: integrationTool.function.description,
-                parameters: jsonSchema(integrationTool.function.parameters),
+                inputSchema: jsonSchema(integrationTool.function.parameters),
                 execute: async (params: any, { toolCallId }) => {
                     try {
                         const response = await fetch(
